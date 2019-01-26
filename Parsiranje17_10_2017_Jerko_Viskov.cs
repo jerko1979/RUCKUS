@@ -85,7 +85,7 @@ public class Parsiranje
         
 
 
-        //string path = "C:\\Users\\ivan.koharovic\\AppData\\Local\\VirtualStore\\Program Files (x86))\\Dude\\data\\files\\";
+        
         string putanja = @"\\WS-VENTEX\files\";
         string path2 = "C:\\Users\\jerko.viskov\\Documents\\Logovi\\";
 
@@ -151,15 +151,9 @@ public class Parsiranje
                         string drugidio = niz[1];
                         string prvidio = niz[0];
 
-
-
                         log.Datetime = DateTime.Parse(prvidio.Substring(0, 20).Replace("-", " "));
                         Console.WriteLine(log.Datetime);
-
-
-                        //var matches = Regex.Matches(drugidio, pattern);
-                        //var matches1 = Regex.Matches(prvidio, pattern1);
-                        //var matches2 = Regex.Matches(prvidio, pattern2);
+                       
 
                         /// <summary>
                         ///  Ispitujem koji o kojem je "tipu" loga riječ.3 tipa Nakon ispitavanja tretiram ga regex metodom.
@@ -262,13 +256,8 @@ public class Parsiranje
                         logovi.Add(log);
                         counter++;
                     }
-                        
-
-
-
-
-                       
-                    
+                                            
+                   
 
                 }
                 sr.Close();
@@ -454,16 +443,7 @@ public class Parsiranje
                 return;
 
             }
-
-
-
-
-
-
-
         }
-
-
 
         //Nakon što se log parsira premješta se u folder "izbrisano".
 
@@ -478,19 +458,9 @@ public class Parsiranje
             string destFile = System.IO.Path.Combine(@"\\WS-VENTEX\files\izbrisano", filename);
             System.IO.File.Move((path1 + filename), destFile);
 
-
-
         }
-
 
         LogHistory history = new LogHistory(filename + "........Zapis uspješan!");
 
-
-
-
-
     }
-  
-
-
-}
+  }
